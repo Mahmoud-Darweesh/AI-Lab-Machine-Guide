@@ -37,6 +37,8 @@ To install Conda on your GPU machine, follow these steps:
 wget https://repo.anaconda.com/archive/Anaconda3-2023.07-2-Linux-x86_64.sh
 ```
 
+You can find all the available versions of the installer [here](https://repo.anaconda.com/archive/).
+
 2. Run the installer by executing the following command:
 
 ```shell
@@ -81,6 +83,8 @@ conda config --set auto_activate_base False
 ```
 
 Note: The above commands only work if `conda init` has been run first. `conda init` is available in Conda versions 4.6.12 and later.
+
+If you find any difficulty in installing conda you can refer to this [video](https://www.youtube.com/watch?v=P6eGTN9QN2Q), they follow similar steps.
 
 Congratulations! You have successfully installed and set up Conda on your GPU machine.
 
