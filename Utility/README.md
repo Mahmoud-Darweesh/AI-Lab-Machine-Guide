@@ -1,3 +1,9 @@
+### Table of Contents
+- [Image Dataset Checker](#image-dataset-checker)
+- [Google Drive File Downloader](#google-drive-file-downloader)
+- [FID Score](#fid-score)
+- [t-SNE and PCA Image Visualization](#t-sne-and-pca-image-visualization)
+
 ### Image Dataset Checker
 
 This [script](/Utility/image_dataset_checker.py) is designed to check an image dataset and provide information about it. It counts the number of images in each folder of a given root folder and checks for image corruption. It also offers the option to delete corrupted images.
