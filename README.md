@@ -5,6 +5,7 @@ Welcome to the GPU GitHub repository guide! This guide provides step-by-step ins
 ### Table of Contents
 
 - [Basic Linux Usage](#basic-linux-usage)
+   - [Connecting to a Remote Linux Machine](#connecting-to-a-remote-linux-machine)
 - [What is Conda?](#what-is-conda)
     - [Installing Conda](#installing-conda)
     - [Setting up Conda Environments](#setting-up-conda-environments)
@@ -17,17 +18,52 @@ Welcome to the GPU GitHub repository guide! This guide provides step-by-step ins
 - [Special Topics](#special-topics)
     - [Handling Multi-GPU Systems](#handling-multi-gpu-systems)
     - [Opening a Browser on the Machine](#opening-a-browser-on-the-machine)
+    - [Using Jupyter Notebook](#using-jupyter-notebook)
 - [Quick Reference](#quick-reference)
 
 ### Basic Linux Usage
 
 To get started with using Linux, we highly recommend watching the [Basic How to Use Linux video](https://www.youtube.com/watch?v=gd7BXuUQ91w) that provides a comprehensive overview of Linux fundamentals.
 
+### Connecting to a Remote Linux Machine
+
+Make sure to connect to the [AUS VPN](https://servicenow.aus.edu/sp?sys_kb_id=d71b18c1872fb150f9c863de8bbb354b&id=kb_article_view&sysparm_rank=1&sysparm_tsqueryId=c92777e293377110d761b4908bba10ff) before connecting to the Remote Linux Machine.
+
+#### Using Terminal
+
+The built-in Terminal application provides a straightforward way to connect to a remote Linux machine using SSH.
+
+1. Open Terminal and use the `ssh` command to establish an SSH connection to the remote Linux machine:
+
+   ```shell
+   ssh username@remote-linux-machine
+   ```
+
+   Replace `username` with your actual username and `remote-linux-machine` with the IP address or hostname of the remote Linux machine.
+
+#### Using MobaXterm for Windows
+
+MobaXterm is a powerful terminal software for Windows that integrates various network tools, including an SSH client, into a single application. Here's how you can use MobaXterm to connect to a remote Linux machine:
+
+1. Download and install MobaXterm on your Windows machine.
+
+2. Launch MobaXterm and click on the "Session" button in the toolbar.
+
+3. In the "Session Settings" window, select "SSH" as the session type.
+
+4. Enter the IP address or hostname of the remote Linux machine in the "Remote host" field.
+
+5. Provide your username in the "Specified username" field.
+
+6. Click "OK" to initiate the SSH connection to the remote Linux machine.
+
+MobaXterm provides a user-friendly interface with tabbed terminal windows, easy file transfer functionality, and advanced SSH capabilities, making it a convenient tool for remotely accessing and managing Linux systems from a Windows environment.
+
 ### What is Conda?
 
 Conda is an open-source package management system and environment management system designed to simplify the installation and management of software packages.
 
-## Installing Conda
+#### Installing Conda
 
 To install Conda on your GPU machine, follow these steps:
 
@@ -381,6 +417,32 @@ Replace `https://google.com` with the desired URL or web page you want to open i
 Note: If Firefox is not installed on your machine, you can install it using the appropriate package manager for your operating system.
 
 By following these steps, you will be able to launch a browser on your GPU machine directly from the terminal, allowing you to perform any necessary web-related tasks or access online resources.
+
+### Using Jupyter Notebook
+
+When working with Jupyter Notebook on a remote server, it is essential to establish a secure connection and access the Jupyter environment through a web browser. Here's how you can accomplish this:
+
+1. Connect to the AUS VPN to securely access the remote server.
+
+2. Open the command prompt (CMD) on your local laptop and run the following command to establish an SSH tunnel:
+
+   ```shell
+   ssh -L 8888:localhost:8888 username@10.00.00.000
+   ```
+
+   Replace `username` with your specific username and `10.00.00.000` with the appropriate IP address of the remote server.
+
+3. Enter the password when prompted to authenticate the SSH connection.
+
+4. After successful authentication, you will receive a URL in the command prompt. Copy and paste this URL into your web browser to access Jupyter Notebook on the remote server.
+
+   For example:
+
+   ```plaintext
+   http://localhost:8888/notebooks/
+   ```
+
+   This will allow you to work with Jupyter Notebook as if it were running on your local machine, providing a seamless and efficient workflow for data analysis and code development.
 
 ### Quick Reference
 
