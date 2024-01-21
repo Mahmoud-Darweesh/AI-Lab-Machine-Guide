@@ -59,6 +59,23 @@ MobaXterm is a powerful terminal software for Windows that integrates various ne
 
 MobaXterm provides a user-friendly interface with tabbed terminal windows, easy file transfer functionality, and advanced SSH capabilities, making it a convenient tool for remotely accessing and managing Linux systems from a Windows environment.
 
+#### Using Cyberduck for Mac
+
+Cyberduck is a versatile, open-source file browser for Mac and Windows that supports FTP, SFTP, WebDAV, cloud storage, and other protocols. You can use this tool to browse files on the remote machine. Here is how you can use it:
+
+1. Download and Install Cyberduck (https://cyberduck.io/).
+
+2. Launch the Cyberduck application and click on the “Open Connection” button at the top left of the Cyberduck window.
+
+3. In the dropdown menu at the top of the connection window, select “SFTP (SSH File Transfer Protocol)”. This is the option for establishing an SSH connection.
+
+4. Enter the IP address or hostname of the remote Linux machine in the "Server" field.
+
+5. Provide your username in the "Username" field.
+
+6. Click the “Connect” button to initiate the connection to your remote PC. If it’s your first time connecting to this server, you may receive a warning about the server's host key; verify and accept it to continue.
+
+
 ### What is Conda?
 
 Conda is an open-source package management system and environment management system designed to simplify the installation and management of software packages.
