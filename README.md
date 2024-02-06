@@ -330,7 +330,7 @@ To use Screen effectively, follow these commands:
 1. Start a new Screen session by running the command:
 
 ```shell
-screen -r screenName
+screen -S screenName
 ```
 
 Replace `screenName` with your desired screen name. Screen will create a new session with the specified name.
