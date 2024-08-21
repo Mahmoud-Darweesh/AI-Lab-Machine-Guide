@@ -3,6 +3,7 @@
 - [Google Drive File Downloader](#google-drive-file-downloader)
 - [FID Score](#fid-score)
 - [t-SNE and PCA Image Visualization](#t-sne-and-pca-image-visualization)
+- [CNN Model Trainning and Testing](#cnn-model-trainning-and-testing)
 
 ### Image Dataset Checker
 
@@ -143,3 +144,66 @@ python image_visualizer.py --datasets /main/dataset/folder --method pca
 - The script generates visualizations and allows annotations using t-SNE or PCA.
 - The `--save-features` option enables saving the extracted features for future use.
 - Specify either `tsne` or `pca` as the `method` argument to choose the dimensionality reduction technique.
+
+
+### CNN Model Trainning and Testing
+
+#### Installation
+
+To use this script, you need to have the following dependencies installed:
+
+```sh
+pip install tensorflow==2.10.0 keras==2.10.0 scikit-learn pandas numpy
+```
+
+---
+
+#### Usage
+
+You can execute the script by simply running it in your Python environment. Make sure you have your image dataset organized and accessible.
+
+```python
+# Assuming the script is saved as cnn_training.py
+python cnn_training.py
+```
+
+---
+
+#### Training Execution
+
+The script initiates the training process by calling the `train` function.
+
+```python
+train(train_generator, validation_generator, test_generator, "Model Name")
+```
+
+For loading a previously trained model and testing it again, you can uncomment and use the following lines:
+
+```python
+# model = load_model("Model/" + "Model Name" + ".h5")
+# test_model(model, test_generator, "Model Name")
+```
+
+---
+
+#### Examples
+
+1. **Train a new model**:
+   ```python
+   python cnn_training.py
+   ```
+
+2. **Use a pre-trained model for testing**:
+   ```python
+   # Uncomment the loading lines in the script
+   python cnn_training.py
+   ```
+
+---
+
+#### Notes
+
+- Ensure your image files are properly labeled and organized in folders.
+- Adjust the image size and batch size if needed.
+- Customize the `extract_label` function if your labeling method differs. (For example, labels saved in a CSV file)
+- Monitor the training process for overfitting or underfitting and adjust hyperparameters accordingly.
