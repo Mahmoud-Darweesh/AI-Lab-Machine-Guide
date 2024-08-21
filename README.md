@@ -451,7 +451,13 @@ When working with Jupyter Notebook on a remote server, it is essential to establ
 
 3. Enter the password when prompted to authenticate the SSH connection.
 
-4. After successful authentication, you will receive a URL in the command prompt. Copy and paste this URL into your web browser to access Jupyter Notebook on the remote server.
+4. Launch Jupyter Notebook
+
+   ```shell
+   jupyter notebook --port 8888
+   ```
+
+5. After successful authentication, you will receive a URL in the command prompt. Copy and paste this URL into your web browser to access Jupyter Notebook on the remote server.
 
    For example:
 
@@ -460,6 +466,9 @@ When working with Jupyter Notebook on a remote server, it is essential to establ
    ```
 
    This will allow you to work with Jupyter Notebook as if it were running on your local machine, providing a seamless and efficient workflow for data analysis and code development.
+
+Note:
+For MAC users instead of `localhost` use `127.0.0.1`
 
 ### Quick Reference
 
